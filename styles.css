@@ -17,7 +17,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* background-color: rgb(16,16,16); */
     background-color: rgb(255, 255, 255);
     background-image: url("./assets/background.webp");
     background-position: top;
@@ -51,10 +50,17 @@ body {
     flex-direction: column;
 }
 
+/* Container cho input mật khẩu và icon */
+.password-container {
+    position: relative;
+    width: 380px;
+}
+
+/* Input email và mật khẩu */
 .container .login input {
     padding: 18px;
     background-color: rgb(245, 245, 245);
-    width: 380px;
+    width: 100%;
     color: black;
     outline: none;
     border: 0.01rem solid transparent;
@@ -63,6 +69,7 @@ body {
     border-radius: 10px;
 }
 
+/* Placeholder của input */
 .container .login input::placeholder {
     color: rgba(0, 0, 0, 0.5);
 }
@@ -72,20 +79,62 @@ body {
     border: 0.01rem solid gray;
 }
 
+/* Định dạng container của input */
+.input-container {
+    position: relative;
+    width: 380px;
+    margin: 5px auto;
+}
+
+/* Định dạng input chung cho username và password */
+.container .login .input-field {
+    padding: 18px;
+    background-color: rgb(245, 245, 245);
+    width: 100%; 
+    color: black;
+    outline: none;
+    border: 0.01rem solid transparent;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 1px; 
+}
+
+/* Định dạng icon mắt cho input mật khẩu */
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.toggle-password img {
+    width: 20px;
+    height: 20px;
+}
+
+.toggle-password:hover {
+    opacity: 1;
+}
+
+/* Button đăng nhập */
 .container .login button {
     padding: 18px;
     width: 380px;
     outline: none;
     border: none;
-    margin: 5px;
     font-size: 16px;
     border-radius: 10px;
     font-weight: bold;
     color: rgb(255, 255, 255);
     cursor: pointer;
     background-color: rgb(16, 16, 16);
+    margin-top: 4px;
 }
 
+/* Quên mật khẩu */
 .container .login .forgot {
     margin-top: 10px;
     color: gray;
@@ -93,68 +142,67 @@ body {
     text-decoration: none;
 }
 
+
+/* Giao diện "OR" */
 .container .login .or {
     margin-top: 20px;
+    margin-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
 
-.container .login .or a{
+.container .login .or a {
     color: rgba(0, 0, 0, 0.48);
     margin: 0 10px;
 }
 
-.container .login .or::before, .container .login .or::after{
+.container .login .or::before,
+.container .login .or::after {
     content: "";
     width: 40%;
     height: 0.01rem;
     background-color: rgb(58, 58, 58);
 }
 
-.container .login .insta {
-    margin-top: 20px;
-    cursor: pointer;
+/* Button Sign Up */
+.signup-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    border-radius: 15px;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
     width: 100%;
-    border: 1px solid rgb(58, 58, 58);
-    padding: 20px;
 }
 
-.container .login .insta img {
-    margin: 0 10px; 
-    width: 40px;
-    height: 40px;
-}
-
-.container .login .insta a {
-    margin: 0;
-    color: black;
-    font-size: 1.03rem;
+.signup-btn {
+    padding: 16px;
+    width: 380px;
+    outline: transparent solid 2px;
+    border: 1px solid currentcolor;
+    font-size: 16px;
+    border-radius: 10px;
     font-weight: bold;
-    text-decoration: none;
-}
-.container .login .insta .nxt {
-    height: 10px;
-    width: 10px;
-    border-right: 3px solid rgb(58, 58, 58);
-    border-top: 3px solid rgb(58, 58, 58);
-    transform: rotate(45deg);
+    color: rgb(16, 16, 16);
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
 }
 
+.signup-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive */
 @media screen and (max-width: 768px) {
     .container {
         height: 100%;
     }
-    body{
+    body {
         background-image: none;
     }
     .qr_section {
         display: none;
     }
-    
 }
