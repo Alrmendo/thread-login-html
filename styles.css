@@ -194,6 +194,36 @@ body {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
+/* Định dạng footer */
+.footer {
+    width: 100%;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    color: rgb(16, 16, 16);
+}
+
+.footer p {
+    margin: 0;
+    font-family: "Product Sans", sans-serif;
+    color: gray;
+}
+
+/* Định dạng liên kết trong footer */
+.footer-link {
+    color: gray;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: black;
+}
+
 /* Responsive */
 @media screen and (max-width: 768px) {
     .container {
